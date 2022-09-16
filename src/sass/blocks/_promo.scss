@@ -1,0 +1,87 @@
+.promo {
+    margin-bottom: 13.5vw;
+    &__slider {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        &-wrapper {
+            width: 100%;
+        }
+        &-prev {
+            position: absolute;
+            left: 3.3vw;
+            top: 50%;
+            transform: translateY(-50%) rotate(180deg);
+            cursor: pointer;
+            z-index: 10;
+        }
+        &-next {
+            position: absolute;
+            right: 3.3vw;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10;
+        }
+        &-prev img,
+        &-next img {
+            width: 1.6vw;
+            height: auto;
+        }
+    }
+    &__slide {
+        position: relative;
+        height: 41.6vw;
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+        & .container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & h2 {
+                font-size: 2.8vw;
+                font-weight: 500;
+                letter-spacing: 0.1vw;
+                line-height: 4.2vw;
+                text-transform: uppercase;
+                color: #fff;
+                width: 85%;
+                margin-top: 0;
+                margin-bottom: 2.4vw;
+            }
+        }
+    }
+    &__indicators {
+        position: absolute;
+        right: 0;
+        bottom: 1.5vw;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        margin: 0 15%;
+        list-style: none;
+    }
+    &__dots {
+        box-sizing: content-box;
+        flex: 0 1 auto;
+        width: .5vw;
+        height: .5vw;
+        border-radius: 50%;
+        margin-right: 0.5vw;
+        margin-left: 0.5vw;
+        cursor: pointer;
+        background-color: #D9D9D9;
+        background-clip: padding-box;
+        opacity: .5;
+        transition: opacity .6s ease;
+    }
+}

@@ -1,0 +1,79 @@
+@import 'libs/normalize';
+@import 'libs/font';
+
+@import 'base/variables';
+* {
+    font-family: 'GraphikLCG', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.visually-hidden {
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+
+.show {
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (min-width: 1025px) {
+    .container {
+        padding: 0 8.8vw;
+    }
+}
+
+@import 'blocks/header';
+@import 'blocks/logo';
+@import 'blocks/menu';
+@import 'blocks/promo';
+@import 'blocks/about';
+@import 'blocks/numbers';
+@import 'blocks/news';
+@import 'blocks/partners';
+@import 'blocks/slick';
+@import 'blocks/buttons';
+@import 'blocks/titles';
+@import 'blocks/footer';

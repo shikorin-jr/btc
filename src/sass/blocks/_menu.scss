@@ -1,0 +1,27 @@
+.menu {
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__link {
+        color: #006382;
+    }
+}
+
+@media (min-width: 1025px) {
+    .menu {
+        
+        &__item {
+            font-weight: 500;
+            &:not(:last-child) {
+                margin-right: 3.75vw;
+                
+            }
+        }
+        &__link {
+            display: block;
+            font-size: 1.1vw;
+        }
+    }
+}

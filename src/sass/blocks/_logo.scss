@@ -1,0 +1,18 @@
+.logo {
+    display: inherit;
+    &__link {
+        display: inherit;
+    }
+    &__img {
+        height: auto;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    .logo {
+        &__img {
+            width: 11.9vw;
+        }
+    }
+}
