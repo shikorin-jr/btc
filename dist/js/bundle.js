@@ -202,7 +202,7 @@ window.addEventListener('DOMContentLoaded', function () {
         wrapper: '.partners__wrapper',
         field: '.partners__list',
         widthSlide: 5,
-        padLeftRight: 17
+        padLeftRight: 17.5
     });
     
 
