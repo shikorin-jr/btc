@@ -41,7 +41,7 @@ function slider({container, slide, nextArrow, prevArrow, wrapper, field, widthSl
 
     const indicators = document.createElement('ol'),
           dots = [];
-    indicators.classList.add('promo__indicators');
+    indicators.classList.add('indicators');
     slider.append(indicators);
 
     for (let i = 0; i < slides.length - widthSlide + 1; i++) {
@@ -61,7 +61,7 @@ function slider({container, slide, nextArrow, prevArrow, wrapper, field, widthSl
         } else {
             offset += widthVW;
         }
-        
+
         slidesField.style.transform = `translateX(-${offset}vw)`;
        
         if (slideIndex == (slides.length - widthSlide + 1)) {
@@ -195,7 +195,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        container: '.partners',
+        container: '.partners__content',
         slide: '.partners__item',
         nextArrow: '.partners .promo__slider-next',
         prevArrow: '.partners .promo__slider-prev',

@@ -53,6 +53,17 @@ ul {
     }
 }
 
+.indicators {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    margin: 0 15%;
+    list-style: none;
+}
+
 .container {
     max-width: 100%;
     width: 100%;

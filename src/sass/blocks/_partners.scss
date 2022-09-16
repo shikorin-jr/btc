@@ -1,10 +1,13 @@
 .partners  {
-    & .container {
-        padding-bottom: 13.5vw;
-        
-    }
+
     & .title {
         margin-bottom: 7.4vw;
+    }
+    &__content {
+        margin-bottom: 13.5vw;
+        & .indicators {
+            bottom: -3vw;
+        }
     }
 
     &__item {

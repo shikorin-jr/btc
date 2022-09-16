@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', function () {
     });
 
     slider({
-        container: '.partners',
+        container: '.partners__content',
         slide: '.partners__item',
         nextArrow: '.partners .promo__slider-next',
         prevArrow: '.partners .promo__slider-prev',
