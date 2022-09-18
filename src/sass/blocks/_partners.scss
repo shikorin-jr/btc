@@ -1,24 +1,5 @@
 .partners  {
-
     & .title {
         margin-bottom: 7.4vw;
-    }
-    &__content {
-        margin-bottom: 13.5vw;
-        & .indicators {
-            bottom: -3vw;
-        }
-    }
-
-    &__item {
-        height: 10vw;
-    }
-    &__img {
-        display: block;
-        margin: 0 auto;
-        max-width: 10vw;
-        width: 100%;
-        height: auto;
-        object-fit: contain;
     }
 }
