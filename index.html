@@ -340,6 +340,9 @@
                     <input required placeholder="Телефон" name="phone" type="phone" class="contacts__input">
                     <input required placeholder="Эл. почта" name="email" type="email" class="contacts__input">
                     <textarea placeholder="Комментарий" name="comment" class="contacts__textarea" cols="10" rows="3"></textarea>
+                    <input type="checkbox" class="contacts__checkbox" id="privacy" name="privacy" value="yes">
+                    <label for="privacy"><span>Я даю согласие на обработку своих предоставленных данных в соответсвии с <a href="#" target="_blank">Политикой использования персональных данных</a></span></label>
+                    
                     <button class="btn btn-blue">Отправить</button>
                 </form>
             </div>
@@ -348,21 +351,48 @@
 
 
     <footer class="footer">
-        <div class="container footer__wrapper">
-            <div class="footer__left">
-                <div class="footer__logo">
-                    <img width="120" height="55" src="./img/logo.svg" alt="logo">
+        <div class="footer__top">
+            <div class="container">
+                <div class="footer__left footer__item">
+                    <div class="logo">
+                        <a href="#" class="logo__link">
+                            <img class="logo__img" src="./img/logo.svg" alt="Логотип BTC">
+                        </a>
+                    </div>
+                    <h1 class="footer__description">
+                        КОМПЛЕКСНЫЕ РЕШЕНИЯ В СФЕРЕ ВОДОСНАБЖЕНИЯ И ВОДООТВЕДЕНИЯ
+                    </h1>
                 </div>
-                <div class="footer__address">
-                    <address class="footer__addr">Казань, Ш.Усманова, д. 32-32</address>
-                    <a class="footer__phone" href="tel:88432273535">+7(843)227-35-35</a>
+                <div class="footer__right footer__item">
+                    <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item">
+                                <a class="menu__link" href="#services">О нас</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#projects">Услуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#about">Наши работы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#about">Блог</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="#information">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </div>
-            <div class="footer__right">
-                <a href="#" class="footer__privacy">Политика конфиденциальности</a>
-                <p class="footer__powered">Torus Group © 2022</p>
             </div>
         </div>
+        <div class="footer__bottom">
+            <div class="container">
+                <span class="copyright">&copy; 2022 — NYAERA</span>
+                <a href="#" class="privacy-policy">Политика конфиденциальности</a>
+            </div>
+        </div>
+        
     </footer>
 
     <script src="/js/bundle.js"></script>
