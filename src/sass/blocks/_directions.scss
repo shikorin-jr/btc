@@ -1,0 +1,23 @@
+.directions {
+    position: relative;
+    margin-bottom: 6.5vw;
+    & .container {
+        justify-content: flex-end;
+        &::before {
+            content: "";
+            background-image: url(../../icons/directions.svg);
+            background-repeat: no-repeat;
+            background-color: rgba(0,0,0,0);
+            background-size: contain;
+            width: 100%;
+            height: 31vw;
+            position: absolute;
+            right: 0;
+            margin-bottom: 0.2vw;
+            z-index: -1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+}

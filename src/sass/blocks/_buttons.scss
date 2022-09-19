@@ -7,15 +7,25 @@
     &-gradient {
         background: linear-gradient(180deg, #006687 0%, #0282A8 100%);
         color: #fff;
+        &:hover {
+            background: linear-gradient(180deg, #0282A8 0%, #006687 100%);
+        }
     }
     &-white {
         border: 0.01vw solid #fff;
         background-color: transparent;
         color: #fff;
+        &:hover {
+            border: 0.01vw solid #006382;
+            background-color: #006382;
+        }
     }
     &-blue {
         background-color: $main-color;
         color: #fff;
+        &:hover {
+            background-color: #006382;
+        }
     }
 }
 
