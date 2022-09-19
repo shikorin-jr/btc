@@ -1,55 +1,37 @@
-import slider from './modules/slider';
 import $ from 'jquery';
 import 'slick-carousel';
-
+import tabs from './modules/tabs';
 
 window.addEventListener('DOMContentLoaded', function () {
 
-    $('.partners__list').slick({
+    $('.promo__slider').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    $('.partners__list').slick({
+        dots: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             }
-          }
 
         ]
-      });
-
-    slider({
-        container: '.promo__slider',
-        slide: '.promo__slide',
-        nextArrow: '.promo__slider-next',
-        prevArrow: '.promo__slider-prev',
-        wrapper: '.promo__slider-wrapper',
-        field: '.promo__slider-inner',
-        widthSlide: 1,
-        padLeftRight: 0
     });
 
-    // slider({
-    //     container: '.partners__content',
-    //     slide: '.partners__item',
-    //     nextArrow: '.partners .promo__slider-next',
-    //     prevArrow: '.partners .promo__slider-prev',
-    //     wrapper: '.partners__wrapper',
-    //     field: '.partners__list',
-    //     widthSlide: 5,
-    //     padLeftRight: 17.5
-    // });
-    
-
-
-    
-    
+    tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
 
 });

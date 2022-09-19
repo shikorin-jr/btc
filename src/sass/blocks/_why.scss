@@ -1,0 +1,98 @@
+.why {
+    & .container {
+        margin: 13.5vw 0;
+    }
+    & .title {
+        margin-bottom: 7.4vw;
+    }
+}
+
+.tabcontainer {
+    margin: 0 auto;
+}   
+
+.tabheader {
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    &.shows { 
+        visibility: visible;
+        opacity: 1;  
+    }
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 7.1vw 7.2vw;
+        position: relative;
+        z-index: 5;
+    }
+    &__item {
+        flex: 0 0 calc((100% / 4) - 5.4vw);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 0.01vw solid #0081bf;
+        border-radius: 0.5vw;
+        padding: 2.7vw 1.05vw 2.9vw 1.05vw;
+        cursor: pointer;
+        transition: .3s all;
+        
+        &_active { 
+            background-color: $main-color;
+            & .tabheader__img {
+                filter: grayscale(1) brightness(1000%);
+                z-index: 1;
+            }
+            & .tabheader__name {
+                color: #fff;
+                z-index: 1;
+            }
+        }
+    }
+    &__img {
+        height: 4.2vw;
+        width: 4.2vw;
+        object-fit: contain;
+        margin-bottom: 0.6vw;
+        margin-top: 0.5vw;
+        z-index: -1;
+    }
+    &__name {
+        position: relative;
+        font-size: 2.2vw;
+        color: $main-color;
+        z-index: -1;
+    }
+}
+
+
+.tabdescr {
+    width: 35vw;
+}
+
+
+.tabcontent {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease;
+    -webkit-transition: opacity 1s ease;
+    &.show { 
+        visibility: visible;
+        opacity: 1;  
+    }
+    & h3 {
+        margin-top: 0;
+        margin-bottom: 1vw;
+        font-weight: 500;
+        font-size: 2.3vw;
+        color: $main-color;
+        line-height: 1;
+    }
+    &__descr {
+        font-size: 1.3vw;
+        line-height: 1.7vw;
+    }
+}

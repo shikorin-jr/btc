@@ -53,17 +53,6 @@ ul {
     }
 }
 
-.indicators {
-    position: absolute;
-    right: 0;
-    left: 0;
-    z-index: 15;
-    display: flex;
-    justify-content: center;
-    margin: 0 15%;
-    list-style: none;
-}
-
 .container {
     max-width: 100%;
     width: 100%;
@@ -84,6 +73,8 @@ ul {
 @import 'blocks/numbers';
 @import 'blocks/news';
 @import 'blocks/partners';
+@import 'blocks/why';
+@import 'blocks/contacts';
 @import 'blocks/slick';
 @import 'blocks/slick-theme';
 @import 'blocks/buttons';

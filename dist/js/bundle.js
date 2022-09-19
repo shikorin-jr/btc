@@ -13941,10 +13941,10 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 /***/ }),
 
-/***/ "./src/js/modules/slider.js":
-/*!**********************************!*\
-  !*** ./src/js/modules/slider.js ***!
-  \**********************************/
+/***/ "./src/js/modules/tabs.js":
+/*!********************************!*\
+  !*** ./src/js/modules/tabs.js ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -13952,105 +13952,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function slider({container, slide, nextArrow, prevArrow, wrapper, field, widthSlide, padLeftRight}) {
-    let offset = 0;
-    let slideIndex = 1;
+function tabs(tabsSelector, tabsContentSelector, tabsParentSelector, activeClass) {
+	let tabs = document.querySelectorAll(tabsSelector),
+		tabsContent = document.querySelectorAll(tabsContentSelector),
+		tabsParent = document.querySelector(tabsParentSelector);
 
-    const slides = document.querySelectorAll(slide),
-        slider = document.querySelector(container),
-        prev = document.querySelector(prevArrow),
-        next = document.querySelector(nextArrow),
-        slidesWrapper = document.querySelector(wrapper),
-        ms = padLeftRight,
-        widthVW = (100 - ms) / widthSlide,
-        slidesField = document.querySelector(field);
+	function hideTabContent() {
         
-    
-    
-    slidesField.style.width = widthVW * slides.length + 'vw';
-    slidesField.style.display = 'flex';
-    slidesField.style.transition = '0.5s all';
-
-    slidesWrapper.style.overflow = 'hidden';
-
-    slides.forEach(slide => {
-        slide.style.width = `${widthVW}vw`;
-    });
-
-    slider.style.position = 'relative';
-
-    const indicators = document.createElement('ol'),
-          dots = [];
-    indicators.classList.add('indicators');
-    slider.append(indicators);
-
-    for (let i = 0; i < slides.length - widthSlide + 1; i++) {
-        const dot = document.createElement('li');
-        dot.setAttribute('data-slide-to', i + 1);
-        dot.classList.add('promo__dots');
-        if (i == 0) {
-            dot.style.opacity = 1;
-        }
-        indicators.append(dot);
-        dots.push(dot);
-    }
-
-    next.addEventListener('click', () => {
-        if (offset == (widthVW * (slides.length - widthSlide))) {
-            offset = 0;
-        } else {
-            offset += widthVW;
-        }
-
-        slidesField.style.transform = `translateX(-${offset}vw)`;
-       
-        if (slideIndex == (slides.length - widthSlide + 1)) {
-            slideIndex = 1;
-        } else {
-            slideIndex++;
-        }
-
-        dots.forEach(dot => dot.style.opacity = ".5");
-        dots[slideIndex-1].style.opacity = 1;
-    });
-
-    prev.addEventListener('click', () => {
-        if (offset == 0 ) {
-            offset = (widthVW * (slides.length - widthSlide));
-        } else {
-            offset -= widthVW;
-        }
-
-        slidesField.style.transform = `translateX(-${offset}vw)`;
-
-        if (slideIndex == 1) {
-            slideIndex = (slides.length - widthSlide + 1);
-        } else {
-            slideIndex--;
-        }
-
-
-        dots.forEach(dot => dot.style.opacity = ".5");
-        dots[slideIndex-1].style.opacity = 1;
-    });
-
-    dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            const slideTo = e.target.getAttribute('data-slide-to');
-
-            slideIndex = slideTo;
-            offset = widthVW * (slideTo - 1);
-
-            slidesField.style.transform = `translateX(-${offset}vw)`;
-
-
-            dots.forEach(dot => dot.style.opacity = ".5");
-            dots[slideIndex-1].style.opacity = 1;
+        tabsContent.forEach(item => {
+            item.classList.add('hide');
+            item.classList.remove('show', 'fade');
         });
+
+        tabs.forEach(item => {
+            item.classList.remove(activeClass);
+        });
+	}
+
+	function showTabContent(i = 0) {
+        tabsContent[i].classList.add('show', 'fade');
+        tabsContent[i].classList.remove('hide');
+        tabs[i].classList.add(activeClass);
+    }
+    
+    hideTabContent();
+    showTabContent();
+
+	tabsParent.addEventListener('click', function(event) {
+        const target = event.target;
+		if(target && target.classList.contains(tabsSelector.slice(1))) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+		}
     });
 }
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (tabs);
 
 /***/ })
 
@@ -14130,64 +14071,46 @@ var __webpack_exports__ = {};
   !*** ./src/js/index.js ***!
   \*************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
-/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
-/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
-
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
+/* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 
 
 
 
 window.addEventListener('DOMContentLoaded', function () {
 
-    jquery__WEBPACK_IMPORTED_MODULE_1___default()('.partners__list').slick({
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.promo__slider').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    });
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners__list').slick({
+        dots: false,
+        infinite: true,
         speed: 300,
         slidesToShow: 5,
         slidesToScroll: 1,
         responsive: [
-          {
-            breakpoint: 1024,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
-              infinite: true,
-              dots: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
             }
-          }
 
         ]
-      });
-
-    (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])({
-        container: '.promo__slider',
-        slide: '.promo__slide',
-        nextArrow: '.promo__slider-next',
-        prevArrow: '.promo__slider-prev',
-        wrapper: '.promo__slider-wrapper',
-        field: '.promo__slider-inner',
-        widthSlide: 1,
-        padLeftRight: 0
     });
 
-    // slider({
-    //     container: '.partners__content',
-    //     slide: '.partners__item',
-    //     nextArrow: '.partners .promo__slider-next',
-    //     prevArrow: '.partners .promo__slider-prev',
-    //     wrapper: '.partners__wrapper',
-    //     field: '.partners__list',
-    //     widthSlide: 5,
-    //     padLeftRight: 17.5
-    // });
-    
-
-
-    
-    
+    (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
 
 });
 })();
