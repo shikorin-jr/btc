@@ -31,6 +31,27 @@
         border-radius: 0.5vw;
         padding: 1.3vw 1.05vw;
     }
+    &__listen {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized { 
+            visibility: visible;
+            opacity: 1;  
+        }
+        & .slick-list {
+            margin: 0 -1.6vw;
+        }
+        & .slick-slide {
+            margin: 0 1.6vw;
+        }
+    }
+    &__itemen {
+        border: 0.01vw solid $main-color;
+        border-radius: 0.5vw;
+        padding: 1.3vw 1.05vw;
+    }
     &__imglink {
         display: block;
         height: 22.2vw;

@@ -14090,6 +14090,27 @@ window.addEventListener('DOMContentLoaded', function () {
         slidesToScroll: 1,
     });
 
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.news__listen').slick({
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 3,
+        centerPadding: '60px',
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            }
+
+        ]
+    });
+
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners__list').slick({
         dots: false,
         infinite: true,
