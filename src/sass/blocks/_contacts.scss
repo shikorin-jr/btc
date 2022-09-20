@@ -132,7 +132,7 @@
             user-select: none;
             &::before {
                 content: '';
-                display: inline-block;
+                display: flex;
                 width: 1.15vw;
                 height: 1.15vw;
                 flex-shrink: 0;
@@ -140,19 +140,19 @@
                 border: 0.12vw solid $main-color;
                 border-radius: 0.4vw;
                 margin-right: 1.8vw;
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: 50% 50%;
                 cursor: pointer;
+                padding: 0.6vw;
+                box-sizing: border-box;
             }
         }
         &:checked+label::before {
             content: '\2713';
             text-align: center;
-            width: 1.15vw;
-            height: 1.15vw;
             color: white;
             background-color: $main-color;
+            font-size: 1vw;
+            align-items: center;
+            justify-content: center;
           }
     }
 

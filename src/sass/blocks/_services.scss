@@ -1,0 +1,51 @@
+.services {
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+    &__item {
+        display: flex;
+        gap: 3.2vw;
+        padding: 0 8.8vw 3.2vw 8.8vw;
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+            background: linear-gradient(180deg, rgba(197, 225, 241, 0.35) 0%, rgba(197, 225, 241, 0.175) 100%);
+        }
+        &:not(:first-child) {
+            padding-top: 3.2vw;
+        }
+    }
+
+    &__image {
+        width: 50%;
+        height: 24.7vw;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 0.6vw;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: $main-color;
+        font-size: 2.22vw;
+        line-height: 3.07vw;
+    }
+
+    &__description {
+        margin: 0;
+        font-size: 1.48vw;
+        line-height: 2.3vw;
+    }
+}
