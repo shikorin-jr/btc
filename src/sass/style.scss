@@ -72,6 +72,25 @@ ul {
     -webkit-box-orient: vertical;
 }
 
+.default {
+    margin-bottom: 6.5vw;
+    & .date {
+        margin-bottom: 5.2vw;
+    }
+    &__content {
+        display: flex;
+        gap: 8vw;
+        &-item {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 0.6vw;
+        }
+    }
+}
+ 
+
 .default__title {
     text-transform: uppercase;
     font-weight: 400;
@@ -97,6 +116,12 @@ ul {
 
 .default__item:not(:last-child){
     margin-bottom: 1.8vw;
+}
+
+.default__text {
+    font-size: 1.4vw;
+    line-height: 2.1vw;
+    margin-bottom: 3.3vw;
 }
 
 .go-link {
@@ -126,6 +151,7 @@ ul {
 @import 'blocks/proccess';
 @import 'blocks/advantages';
 @import 'blocks/project';
+@import 'blocks/thanks';
 @import 'blocks/modal';
 @import 'blocks/breadcrumbs';
 @import 'blocks/slick';

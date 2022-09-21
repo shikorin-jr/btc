@@ -40,12 +40,14 @@
         visibility: hidden;
         transition: opacity 1s ease;
         -webkit-transition: opacity 1s ease;
+        
         &.slick-initialized { 
             visibility: visible;
             opacity: 1;  
         }
         & .slick-list {
             margin: 0 -3vw;
+            padding: 0.1vw 0;
         }
         & .slick-slide {
             margin: 0 3vw;
@@ -54,6 +56,11 @@
     &__itemen {
         border: 0.01vw solid $main-color;
         border-radius: 0.5vw;
+        &:hover {
+            -webkit-box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+            -moz-box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+            box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+        }
     }
     &__image {
         display: block;
