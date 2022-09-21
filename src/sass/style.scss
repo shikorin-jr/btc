@@ -79,14 +79,49 @@ ul {
     }
     &__content {
         display: flex;
-        gap: 8vw;
+        gap: 6vw;
         &-item {
-            width: 50%;
+            width: calc((100% / 2) - 3vw);
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            // align-items: flex-start;
             margin-bottom: 0.6vw;
         }
+    }
+    &__listen {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized { 
+            visibility: visible;
+            opacity: 1;  
+            
+        }
+    }
+
+    &__image {
+        display: block;
+        height: 28vw;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.5vw;
+        margin-bottom: 2vw;
+    }
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    & .slick-dots {
+        bottom: 0vw;
+    }
+    & .slick-prev {
+        left: -3.3vw;
+    }
+    & .slick-next {
+        right: -3.3vw;
     }
 }
  
@@ -152,6 +187,7 @@ ul {
 @import 'blocks/advantages';
 @import 'blocks/project';
 @import 'blocks/thanks';
+@import 'blocks/consultation';
 @import 'blocks/modal';
 @import 'blocks/breadcrumbs';
 @import 'blocks/slick';
