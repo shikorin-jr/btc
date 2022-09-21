@@ -1,4 +1,5 @@
 .services {
+    margin-bottom: 6.5vw;
     &__list {
         display: flex;
         flex-direction: column;
@@ -38,14 +39,55 @@
     &__title {
         margin-top: 0;
         margin-bottom: 0;
-        color: $main-color;
         font-size: 2.22vw;
         line-height: 3.07vw;
+        & a {
+            color: $main-color;
+        }
     }
 
     &__description {
         margin: 0;
         font-size: 1.48vw;
         line-height: 2.3vw;
+    }
+    
+}
+
+.ser-internal {
+    margin-bottom: 6.5vw;
+    padding: 6.5vw 0;
+    background-color: #fafafa;
+    & .container {
+        display: flex;
+        gap: 8vw;
+    }
+    &__item {
+        display: flex;
+        
+    }
+    &__content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0.6vw;
+        & .title {
+            margin-bottom: 2.75vw;
+        }
+    }
+    &__description {
+        font-size: 1.35vw;
+        line-height: 2.1vw;
+        margin: 0;
+    }
+    &__image {
+        width: 50%;
+        height: 24.7vw;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

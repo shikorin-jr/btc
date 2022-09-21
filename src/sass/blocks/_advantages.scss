@@ -1,0 +1,35 @@
+.advantages {
+    margin-bottom: 6.5vw;
+    & .title {
+        margin-bottom: 5vw;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        gap: 3vw 8vw;
+        
+    }
+    &__item {
+        position: relative;
+        padding-left: 5vw;
+        width: calc(50% - 4vw);
+        font-size: 1.35vw;
+        line-height: 2.1vw;
+        &::before {
+            content: "";
+            background-image: url(../../icons/mark-advantages.svg);
+            width: 2.5vw;
+            background-repeat: no-repeat;
+            background-color: rgba(0,0,0,0);
+            background-size: contain;
+            height: 100%;
+            position: absolute;
+            top: 0.5vw;
+            margin-bottom: 0.2vw;
+            z-index: -1;
+            left: 0;
+        }
+    }
+}

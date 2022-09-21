@@ -30,11 +30,11 @@ ul {
 }
 
 .show {
-    display: block
+    display: block !important;
 }
 
 .hide {
-    display: none
+    display: none !important;
 }
 
 .fade {
@@ -121,6 +121,7 @@ ul {
 @import 'blocks/proccess';
 @import 'blocks/advantages';
 @import 'blocks/project';
+@import 'blocks/modal';
 @import 'blocks/breadcrumbs';
 @import 'blocks/slick';
 @import 'blocks/slick-theme';
