@@ -29,7 +29,6 @@ ul {
     width: 1px;
 }
 
-
 .show {
     display: block
 }
@@ -59,6 +58,48 @@ ul {
     margin: 0 auto;
 }
 
+.date {
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.68);
+    font-size: 1.3vw;
+}
+
+.card-title {
+    font-size: 1.71vw;
+    color: $main-color;
+    height: 4vw;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+.default__title {
+    text-transform: uppercase;
+    font-weight: 400;
+    color: $main-color;
+    font-size: 1.6vw;
+    margin-top: 0;
+    margin-bottom: 1.9vw;
+}
+
+.default__item {
+    list-style-type: disc;
+    font-size: 1.4vw;
+    margin-left: 1.32vw;
+    &::marker {
+        color: $main-color;
+        font-size: 1.65vw;
+    }
+}
+
+.default__list {
+    margin-bottom: 4vw;
+}
+
+.default__item:not(:last-child){
+    margin-bottom: 1.8vw;
+}
+
 @media (min-width: 1025px) {
     .container {
         padding: 0 8.8vw;
@@ -78,6 +119,8 @@ ul {
 @import 'blocks/contacts';
 @import 'blocks/services';
 @import 'blocks/proccess';
+@import 'blocks/advantages';
+@import 'blocks/project';
 @import 'blocks/breadcrumbs';
 @import 'blocks/slick';
 @import 'blocks/slick-theme';

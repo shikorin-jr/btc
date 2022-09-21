@@ -2,7 +2,7 @@
     position: relative;
     background: linear-gradient(180deg, rgba(197, 225, 241, 0.25) 0%, rgba(197, 225, 241, 0.125) 100%);
     padding-top: 6.5vw;
-    padding-bottom: 6.5vw;
+    padding-bottom: 2.5vw;
     & .container {
         justify-content: flex-end;
         &::before {
@@ -33,28 +33,6 @@
         line-height: 2.1vw;
         margin-bottom: 3.6vw;
     }
-    &__subtitles {
-        text-transform: uppercase;
-        font-weight: 400;
-        color: $main-color;
-        font-size: 1.6vw;
-        margin-top: 0;
-        margin-bottom: 1.9vw;
-    }
-    &__list:not(:last-child) {
-        margin-bottom: 4vw;
-    }
-    &__item {
-        list-style-type: disc;
-        font-size: 1.4vw;
-        margin-left: 1.32vw;
-        
-        &::marker {
-            color: $main-color;
-            font-size: 1.65vw;
-        }
-    }
-    &__item:not(:last-child){
-        margin-bottom: 1.8vw;
-    }
+    
+    
 }

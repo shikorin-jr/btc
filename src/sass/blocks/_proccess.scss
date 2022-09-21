@@ -25,7 +25,7 @@
     & ol::before{
         position: absolute;
         bottom: -3.5vw;
-    right: -1.5vw;
+        right: -1.5vw;
         counter-increment: list;
         content: counter(list); 
         font-size: 15vw;
