@@ -10,11 +10,6 @@
         & .title {
             width: 70%;
         }
-        & .news__go {
-            font-size: 1.49vw;
-            font-weight: 500;
-            color: $main-color;
-        }
     }
     &__list {
         display: flex;
@@ -71,6 +66,7 @@
     & .card-title {
         margin-bottom: 1.3vw;
         -webkit-line-clamp: 2;
+        height: 4vw;
     }
     &__description {
         margin-top: 0;
@@ -94,5 +90,14 @@
             color: $main-color;
             margin-left: 0.5vw;
         }
+    }
+    & .slick-dots {
+        bottom: -2.7vw;
+    }
+    & .slick-prev {
+        left: -3.3vw;
+    }
+    & .slick-next {
+        right: -3.3vw;
     }
 }

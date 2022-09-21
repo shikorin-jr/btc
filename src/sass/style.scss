@@ -67,7 +67,6 @@ ul {
 .card-title {
     font-size: 1.71vw;
     color: $main-color;
-    height: 4vw;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -98,6 +97,12 @@ ul {
 
 .default__item:not(:last-child){
     margin-bottom: 1.8vw;
+}
+
+.go-link {
+    font-size: 1.49vw;
+    font-weight: 500;
+    color: $main-color;
 }
 
 @media (min-width: 1025px) {

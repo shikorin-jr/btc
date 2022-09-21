@@ -1,0 +1,89 @@
+.project {
+    margin-bottom: 6.5vw;
+    & .container {
+        padding-bottom: 6.5vw;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 4.8vw;
+        & .title {
+            width: 70%;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        gap: 6vw;
+        position: relative;
+        z-index: 5;
+    }
+    &__item {
+        width: calc((100% / 2) - 3vw);
+        border: 0.01vw solid $main-color;
+        border-radius: 0.5vw;
+        &:hover {
+            -webkit-box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+            -moz-box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+            box-shadow: 0vw 0vw 0vw 0.1vw $main-color;
+        }
+    }
+    &__link {
+        display: block;
+        padding: 1.3vw 1.05vw;
+    }
+    &__listen {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s ease;
+        -webkit-transition: opacity 1s ease;
+        &.slick-initialized { 
+            visibility: visible;
+            opacity: 1;  
+        }
+        & .slick-list {
+            margin: 0 -3vw;
+        }
+        & .slick-slide {
+            margin: 0 3vw;
+        }
+    }
+    &__itemen {
+        border: 0.01vw solid $main-color;
+        border-radius: 0.5vw;
+    }
+    &__image {
+        display: block;
+        height: 27.6vw;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 0.5vw;
+        margin-bottom: 2vw;
+    }
+    &__img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    & .date {
+        margin-bottom: 2.1vw;
+    }
+    & .card-title {
+        margin-bottom: 1.3vw;
+        margin-top: 0;
+        -webkit-line-clamp: 3;
+        height: 6vw;
+    }
+    & .slick-dots {
+        bottom: -2.7vw;
+    }
+    & .slick-prev {
+        left: -3.3vw;
+    }
+    & .slick-next {
+        right: -3.3vw;
+    }
+}

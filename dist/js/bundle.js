@@ -14162,7 +14162,26 @@ window.addEventListener('DOMContentLoaded', function () {
         infinite: true,
         speed: 300,
         slidesToShow: 3,
-        centerPadding: '60px',
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            }
+
+        ]
+    });
+
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.project__listen').slick({
+        dots: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 2,
         slidesToScroll: 1,
         responsive: [
             {

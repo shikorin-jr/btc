@@ -3,7 +3,7 @@
     & .title {
         margin-bottom: 7.4vw;
     }
-    & ul {
+    & ol {
         counter-reset: list; 
         display: flex;
         flex-wrap: wrap;
@@ -11,7 +11,7 @@
         width: 100%;
         gap: 3.6vw 3vw;
     }
-    & ol {
+    & li {
         position: relative;
         width: calc((100% / 3) - 2vw);
         padding: 1.8vw 2.3vw 1.6vw 2.3vw;
@@ -23,7 +23,7 @@
             line-height: 1.96vw;
         }
     }
-    & ol::before{
+    & li::before{
         position: absolute;
         bottom: -3.5vw;
         right: -1.5vw;
