@@ -46,6 +46,17 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .footer {
+        &__description {
+            font-size: 1.51vw;
+            width: 40vw;
+            margin-top: 2vw;
+            line-height: 2.3vw;
+        }
+    }
+}
+
 @media (min-width: 1025px) {
     .footer {
         &__top {

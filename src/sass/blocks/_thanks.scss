@@ -14,18 +14,16 @@
     }
     &__item {
         width: calc((100% / 3) - 6vw);
-        
         border-radius: 0.5vw;
         overflow: hidden;
-
         & a {
             display: block;
-            height: 30vw;
+            height: 29.7vw;
             width: 100%;
             overflow: hidden;
             position: relative;
             & img {
-                object-fit: contain;
+                object-fit: cover;
                 height: 100%;
                 width: 100%;
             }

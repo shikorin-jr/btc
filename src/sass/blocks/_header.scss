@@ -1,19 +1,18 @@
 .header {   
     border-bottom: 0.2vw solid $main-color; 
+    z-index: 15;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
     & .container {
         display: flex;
         justify-content: space-between;
     }
-
-    &__item {
-        flex: 1 1 50%;
-    }
     &__left {
         display: flex;
         align-items: center;
-        & .logo {
-            margin-right: 1.5vw;
-        }
     }
     &__description {
         font-weight: 700;
@@ -54,11 +53,50 @@
     }
 }
 
+@media (max-width: 1025px) {
+    .header {
+        & .container {
+            height: 16vw;
+        }
+        &__left {
+            & .logo {
+                margin-right: 2.2vw;
+            }
+        }
+        &__description {
+            font-size: 1.51vw;
+            width: 40vw;
+            margin-top: 2vw;
+            line-height: 2.3vw;
+        }
+        &__right{
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            transform: translateX(100%);
+            transition: transform 0.5s ease-in;
+        }
+    }
+}
 
 @media (min-width: 1025px) {
     .header {
         & .container {
-            height: 10.6vw;
+            height: 8.9vw;
+        }
+        &__item {
+            flex: 1 1 50%;
+        }
+        &__left {
+            & .logo {
+                margin-right: 1.5vw;
+            }
         }
         &__description {
             max-width: 24vw;

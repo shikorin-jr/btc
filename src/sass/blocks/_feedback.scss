@@ -1,0 +1,62 @@
+.feedback {
+    padding: 6.5vw 0 13vw 0;
+    & .container:first-child {
+        display: flex;
+        margin-bottom: 10.2vw;
+    }
+    & .container:last-child {
+        display: flex;
+        justify-content: center;
+    }
+    &__content {
+        width: 35%;
+    }
+    &__map {
+        position:relative;
+        overflow:hidden;
+        width: 65%;
+        height: 37vw;
+        & iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 1.5vw;
+        font-weight: 500;
+        font-size: 1.62vw;
+        color: $main-color;
+    }
+    &__text {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 3.5vw;
+        font-weight: 500;
+        font-size: 1.46vw;
+        color: #000;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & .contacts__form {
+            width: 38vw;
+            margin: 0;
+        }
+    }
+    &__order {
+        margin-top: 0;
+        margin-bottom: 1.4vw;
+        font-weight: 500;
+        font-size: 2.45vw;
+        color: $main-color;
+    }
+    &__description {
+        margin-top: 0;
+        margin-bottom: 4.5vw;
+        font-weight: 500;
+        font-size: 1.73vw;
+    }
+}

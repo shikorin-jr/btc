@@ -7,8 +7,16 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+}
+
 a {
     text-decoration: none;
+}
+
+.header__phone:hover, .menu__link:hover, .go-link:hover, .card-title:hover, .news__readmore:hover, .kama_breadcrumbs span a:hover, .feedback__content a:hover, .contacts__form label a:hover, .page-numbers:hover, .contacts__phone:hover, .contacts__mail:hover, .post-link__linked:hover {
+    opacity: 0.8;
 }
 
 ul {
@@ -31,6 +39,10 @@ ul {
 
 .show {
     display: block !important;
+}
+
+.show-flex {
+    display: flex !important;
 }
 
 .hide {
@@ -165,13 +177,40 @@ ul {
     color: $main-color;
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    & .current {
+        color: #000;
+    }
+}
+
+.page-numbers {
+    font-size: 1.5vw;
+    margin: 1.8vw 1.4vw;
+    color: #B3B2B2;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 4.3vw;
+    }
+    main {
+        margin-top: 16vw;
+    }
+}
+
 @media (min-width: 1025px) {
     .container {
         padding: 0 8.8vw;
     }
+    main {
+        margin-top: 8.9vw;
+    }
 }
 
 @import 'blocks/header';
+@import 'blocks/hamburger';
 @import 'blocks/logo';
 @import 'blocks/menu';
 @import 'blocks/promo';
@@ -188,6 +227,8 @@ ul {
 @import 'blocks/project';
 @import 'blocks/thanks';
 @import 'blocks/consultation';
+@import 'blocks/feedback';
+@import 'blocks/post-link';
 @import 'blocks/modal';
 @import 'blocks/breadcrumbs';
 @import 'blocks/slick';

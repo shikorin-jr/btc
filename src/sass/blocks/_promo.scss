@@ -83,3 +83,19 @@
         line-height: 2.2vw;
     }
 }
+
+@media (max-width: 1024px) {
+    .promo {
+        &__slide {
+            height: 41.55vw;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .promo {
+        &__slide {
+            height: 41.55vw;
+        }
+    }
+}

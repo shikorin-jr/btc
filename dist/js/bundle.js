@@ -14240,6 +14240,27 @@ window.addEventListener('DOMContentLoaded', function () {
 
     (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_2__["default"])('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     (0,_modules_modal__WEBPACK_IMPORTED_MODULE_3__["default"])('[data-modal]', '.modal', modalTimerId);
+
+
+    const navSlide = () => {
+        const hamburger = document.querySelector('.hamburger');
+        const hmenu = document.querySelector('.header__right');
+
+        hamburger.addEventListener('click', () => {
+            hmenu.classList.toggle('nav-active');
+            document.body.classList.toggle('hidden');
+            hamburger.classList.toggle('toggle');
+        });
+    };
+
+    const app = () => {
+        navSlide();
+    };
+
+    app();
+
+
+
 });
 }();
 /******/ })()

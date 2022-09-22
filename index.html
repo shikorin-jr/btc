@@ -54,6 +54,12 @@
                         </li>
                     </ul>
                 </nav>
+                
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
             </div>
         </div>
     </header>
@@ -586,9 +592,9 @@
 
         <section class="feedback">
             <div class="container">
-                <div class="feedback__content">
+                <div class="feedback__content ">
                     <h2 class="feedback__title">
-                        Фактический адрес
+                        Фактический адрес:
                     </h2>
                     <span class="feedback__text">
                         г. Казань, ул. Мира, 144
@@ -599,15 +605,27 @@
                     <span class="feedback__text">
                         г. Москва, ул. Аргуновская, 2 к.2
                     </span>
+                    <h2 class="feedback__title">
+                        Телефон
+                    </h2>
+                    <a href="#" class="feedback__text">
+                        +7 (843) 207-09-11
+                    </a>
+                    <h2 class="feedback__title">
+                        E-MAIL
+                    </h2>
+                    <a href="#" class="feedback__text">
+                        vt-kazan@mail.ru
+                    </a>
                 </div>
-                <div class="feedback__map">
-                    
+                <div class="feedback__map ">
+                    <iframe src="https://yandex.ru/map-widget/v1/-/CCUVbTeA2C"  style="position:relative;"></iframe>
                 </div>
             </div>
             <div class="container">
                 <div class="feedback__form">
-                    <h2 class="feedback__title">Оставьте заявку</h2>
-                    <div class="feedback__description">Заполните поля формы, и мы свяжемся с вами</div>
+                    <h2 class="feedback__order">Оставьте заявку</h2>
+                    <p class="feedback__description">Заполните поля формы, и мы свяжемся с вами</p>
                     <form action="#" class="contacts__form">
                         <input required placeholder="Имя" name="name" type="text" class="contacts__input">
                         <input required placeholder="Телефон" name="phone" type="tel" class="contacts__input">
@@ -697,7 +715,22 @@
             </div>
         </section>
 
-        <section class="partners" style="display: none;">
+        <div class="post-link">
+            <div class="container">
+                <div class="post-link__item">
+                    <a href="#" class="post-link__linked">Предыдущая новость</a>
+                    <p class="post-link__descr">Lörem ipsum vil bektiga, regörade: speposyr men ratt och yngar. Ultrana homogöfasm spet i teograf sedan uskapet. Plaling trityp, nutijåv faprevis plus popås i faktigt. Ten hemikack. 
+                    </p>
+                </div>
+                <div class="post-link__item">
+                    <a href="#" class="post-link__linked">Следующая новость</a>
+                    <p class="post-link__descr">Lörem ipsum vil bektiga, regörade: speposyr men ratt och yngar. Ultrana homogöfasm spet i teograf sedan uskapet. Plaling trityp, nutijåv faprevis plus popås i faktigt. Ten hemikack. 
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <section class="partners">
             <div class="container">
                 <h2 class="title">Наши заказчики</h2>
                 <ul class="partners__list">
@@ -732,7 +765,7 @@
             </div>
         </section>
 
-        <section class="partners" style="display: none;">
+        <section class="partners">
             <div class="container">
                 <h2 class="title">Наши поставщики</h2>
                 <ul class="partners__list">
@@ -767,7 +800,7 @@
             </div>
         </section>
 
-        <section class="why" style="display: none;">
+        <section class="why">
             <div class="container">
                 <h2 class="title">Почему выбирают нас?</h2>
                 <div class="tabcontainer">
@@ -957,7 +990,7 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content">
-                <form action="#">
+                <form action="#" class="contacts__form">
                     <div class="modal__close" data-close>&times;</div>
                     <h2 class="modal__title">
                         Запрос консультации

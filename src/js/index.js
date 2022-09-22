@@ -2,7 +2,7 @@ import $ from 'jquery';
 import 'slick-carousel';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
-import {openModal} from './modules/modal';
+import { openModal } from './modules/modal';
 
 window.addEventListener('DOMContentLoaded', function () {
 
@@ -97,4 +97,25 @@ window.addEventListener('DOMContentLoaded', function () {
 
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
     modal('[data-modal]', '.modal', modalTimerId);
+
+
+    const navSlide = () => {
+        const hamburger = document.querySelector('.hamburger');
+        const hmenu = document.querySelector('.header__right');
+
+        hamburger.addEventListener('click', () => {
+            hmenu.classList.toggle('nav-active');
+            document.body.classList.toggle('hidden');
+            hamburger.classList.toggle('toggle');
+        });
+    };
+
+    const app = () => {
+        navSlide();
+    };
+
+    app();
+
+
+
 });

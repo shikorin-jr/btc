@@ -1,0 +1,55 @@
+.hamburger {
+    cursor: pointer;
+    & div {
+        background-color: #000;
+        transition: all 0.3s ease
+    }
+} 
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 3.3vw;
+        top: 50%;
+        transform: translateY(-50%);
+        & div {
+            display: block;
+            width: 4.6vw;
+            margin: 0.8vw 1vw;
+            height: 0.35vw;
+            background-color: $main-color;
+        }
+    }
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-0.5vw, 0.5vw);
+        background-color: #fff;
+        transition: all 1s ease;
+    }
+    .toggle .line2 {
+        transform: scaleY(0);;
+        background-color: #fff;
+        transition: all 1s ease;
+    }
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-0.5vw, -0.5vw);
+        background-color: #fff;
+        transition: all 1s ease;
+    }
+    .nav-active {
+        transform: translateX(0%);
+    }
+    .nav-active {
+        transform: translateX(0%)
+    }
+    .hidden {
+        overflow: hidden;
+    }
+
+}
+
+@media (min-width: 1025px) {
+    .hamburger {
+        display: none;
+    }
+}

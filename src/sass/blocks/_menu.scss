@@ -9,9 +9,38 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .header .menu {
+        &__list {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 19vw;
+            margin-bottom: 10vw;
+            overflow-y: scroll;
+        }
+        &__item {
+            font-size: 8.3vw;
+            line-height: 13.5vw;
+            text-transform: uppercase;
+            list-style-type: none;
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                color: $main-color;
+            }
+            & a {
+                color: #fff;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width: 1025px) {
     .menu {
-        
         &__item {
             font-weight: 500;
             &:not(:last-child) {
