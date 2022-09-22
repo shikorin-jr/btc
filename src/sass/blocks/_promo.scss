@@ -23,13 +23,10 @@
             justify-content: center;
 
             & h2 {
-                font-size: 2.8vw;
                 font-weight: 500;
                 letter-spacing: 0.1vw;
-                line-height: 4.2vw;
                 text-transform: uppercase;
                 color: #fff;
-                width: 85%;
                 margin-top: 0;
                 margin-bottom: 2.4vw;
             }
@@ -87,8 +84,17 @@
 @media (max-width: 1024px) {
     .promo {
         &__slide {
-            height: 41.55vw;
+            height: 70vw;
+            & .container {
+                padding: 0 10vw;
+                & h2 {
+                    font-size: 4vw;
+                    line-height: 6vw;
+                    width: 100%;
+                }
+            }
         }
+        
     }
 }
 
@@ -96,6 +102,13 @@
     .promo {
         &__slide {
             height: 41.55vw;
+            & .container {
+                & h2 {
+                    font-size: 2.8vw;
+                    line-height: 4.2vw;
+                    width: 85%;
+                }
+            }
         }
     }
 }
