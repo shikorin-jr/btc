@@ -1,7 +1,5 @@
 .news {
-    & .container {
-        padding-bottom: 6.5vw;
-    }
+    margin-bottom: 6.5vw;
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -65,17 +63,11 @@
         margin-bottom: 1.85vw;
     }
     & .card-title {
-        margin-bottom: 1.3vw;
         -webkit-line-clamp: 2;
-        height: 4vw;
     }
     &__description {
         margin-top: 0;
-        font-size: 1.29vw;
         font-weight: 300;
-        line-height: 1.82vw;
-        margin-bottom: 2vw;
-        height: 7vw;
         overflow: hidden;
         display: -webkit-box;
         -webkit-line-clamp: 4;
@@ -92,13 +84,66 @@
             margin-left: 0.5vw;
         }
     }
-    & .slick-dots {
-        bottom: -2.7vw;
-    }
+    
     & .slick-prev {
         left: -3.3vw;
     }
     & .slick-next {
         right: -3.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .news {
+        margin-bottom: 15vw;
+        &__imglink {
+            height: 35vw;
+            margin-bottom: 4vw;
+        }
+        & .card-title {
+            margin-bottom: 2vw;
+            height: 7vw;
+            line-height: 3.5vw;
+        }
+        &__description {
+            font-size: 3vw;
+            height: 14vw;
+            margin-bottom: 4vw;
+            line-height: 3.5vw;
+        }
+        &__readmore {
+            margin-bottom: 1vw;
+            font-size: 3vw;
+        }
+        & .slick-dots {
+            bottom: -5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .news {
+        margin-bottom: 6.5vw;
+        &__imglink {
+            height: 22.2vw;
+            margin-bottom: 2vw;
+        }
+        & .card-title {
+            margin-bottom: 1.3vw;
+            height: 4vw;
+        }
+        &__description {
+            font-size: 1.29vw;
+            line-height: 1.82vw;
+            height: 7vw;
+            margin-bottom: 2vw;
+        }
+        &__readmore {
+            margin-bottom: 0.8vw;
+            font-size: 1.1vw;
+        }
+        & .slick-dots {
+            bottom: -2.7vw;
+        }
     }
 }

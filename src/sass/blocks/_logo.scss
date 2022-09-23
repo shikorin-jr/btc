@@ -8,7 +8,15 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
+    .logo {
+        &__img {
+            width: 22vw;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
     .logo {
         &__img {
             width: 16.9vw;

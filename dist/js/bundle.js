@@ -14168,9 +14168,10 @@ window.addEventListener('DOMContentLoaded', function () {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: true,
+                    arrows: false
                 }
             }
 
@@ -14188,7 +14189,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -14202,19 +14203,7 @@ window.addEventListener('DOMContentLoaded', function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 3,
-                    infinite: true,
-                    dots: true
-                }
-            }
-
-        ]
+        slidesToScroll: 1
     });
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.partners__list').slick({
@@ -14228,7 +14217,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 breakpoint: 1024,
                 settings: {
                     slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }

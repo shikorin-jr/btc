@@ -37,6 +37,21 @@
             }
         }
     }
+
+    .footer .menu {
+        &__list {
+            width: 100%;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+        }
+        &__item {
+            font-weight: 500;
+            &:not(:last-child) {
+                margin-right: 3.75vw;
+                
+            }
+        }
+    }
 }
 
 @media (min-width: 1025px) {

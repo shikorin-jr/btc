@@ -1,6 +1,5 @@
 .about {
     position: relative;
-    margin-bottom: 6.5vw;
     & .container {
         display: flex;
         justify-content: flex-end;
@@ -20,22 +19,50 @@
             transform: translateY(-50%);
         }
     }
-    &__wrapper {
-        width: 50.6vw;
-    }
     &__title {
         color: $main-color;
         font-weight: 700;
-        font-size: 2.56vw;
         margin-top: 0;
-        margin-bottom: 3.2vw;
     }
     &__description {
         margin-top: 0;
-        margin-bottom: 2.6vw;
         font-weight: 400;
-        font-size: 1.4vw;
-        letter-spacing: 0.047vw;
-        line-height: 2.3vw;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .about{
+        margin-bottom: 15vw;
+        &__title {
+            font-size: 4vw;
+            margin-bottom: 5vw;
+        }
+        &__wrapper {
+            width: 75vw;
+        }
+        &__description {
+            margin-bottom: 5vw;
+            font-size: 3vw;
+            line-height: 5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .about {
+        margin-bottom: 6.5vw;
+        &__title {
+            font-size: 2.56vw;
+            margin-bottom: 3.2vw;
+        }
+        &__wrapper {
+            width: 50.6vw;
+        }
+        &__description {
+            margin-bottom: 2.6vw;
+            font-size: 1.4vw;
+            line-height: 2.3vw;
+        }
     }
 }

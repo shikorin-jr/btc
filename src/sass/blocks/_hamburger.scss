@@ -6,11 +6,22 @@
     }
 } 
 
+@media (max-width: 768px) {
+    .hamburger {
+        right: 3.3vw;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hamburger {
+        right: 7.8vw;
+    }
+}
+
 @media (max-width: 1024px) {
     .hamburger {
         display: block;
         position: absolute;
-        right: 3.3vw;
         top: 50%;
         transform: translateY(-50%);
         & div {
@@ -22,7 +33,7 @@
         }
     }
     .toggle .line1 {
-        transform: rotate(-45deg) translate(-0.5vw, 0.5vw);
+        transform: rotate(-45deg) translate(-.8vw,.8vw);
         background-color: #fff;
         transition: all 1s ease;
     }
@@ -32,7 +43,7 @@
         transition: all 1s ease;
     }
     .toggle .line3 {
-        transform: rotate(45deg) translate(-0.5vw, -0.5vw);
+        transform: rotate(45deg) translate(-.8vw,-.8vw);
         background-color: #fff;
         transition: all 1s ease;
     }

@@ -73,7 +73,6 @@ ul {
 .date {
     display: inline-block;
     color: rgba(0, 0, 0, 0.68);
-    font-size: 1.3vw;
 }
 
 .card-title {
@@ -191,21 +190,40 @@ ul {
     color: #B3B2B2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .container {
         padding: 0 4.3vw;
     }
     main {
         margin-top: 16vw;
     }
+    .go-link {
+        font-size: 3vw;
+        line-height: 4vw;
+    }
+    .date {
+        font-size: 2vw;
+    }
+    .card-title {
+        font-size: 3vw;
+    }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
     .container {
         padding: 0 8.8vw;
     }
     main {
         margin-top: 8.9vw;
+    }
+    .go-link {
+        font-size: 1.49vw;
+    }
+    .date {
+        font-size: 1.3vw;
+    }
+    .card-title {
+        font-size: 1.71vw;
     }
 }
 

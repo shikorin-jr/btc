@@ -53,21 +53,51 @@
     }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 768px) {
     .header {
         & .container {
             height: 16vw;
         }
-        &__left {
-            & .logo {
-                margin-right: 2.2vw;
-            }
+        &__description {
+            font-size: 2.2vw;
+            width: 55vw;
+            margin-top: 2vw;
+            line-height: 3.3vw;
         }
+    }
+
+    
+}
+
+@media (min-width: 769px) {
+    .header {
+        & .container {
+            height: 8.9vw;
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        
+
         &__description {
             font-size: 1.51vw;
             width: 40vw;
             margin-top: 2vw;
             line-height: 2.3vw;
+        }
+
+    }
+}
+
+@media (max-width: 1025px) {
+    .header {
+        
+        &__left {
+            & .logo {
+                margin-right: 2.2vw;
+            }
         }
         &__right{
             position: absolute;
@@ -87,9 +117,7 @@
 
 @media (min-width: 1025px) {
     .header {
-        & .container {
-            height: 8.9vw;
-        }
+
         &__item {
             flex: 1 1 50%;
         }

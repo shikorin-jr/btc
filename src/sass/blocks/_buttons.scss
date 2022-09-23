@@ -28,7 +28,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
     .btn {
         &-gradient {
             min-width: 14vw;
@@ -36,23 +36,22 @@
             font-size: 1.4vw;
         }
         &-white {
-            min-width: 17vw;
-            padding: 1.2vw;
-            font-size: 2.2vw;
-            width: fit-content;
+            padding: 2.5vw;
+            font-size: 3vw;
+            width: 100%;
         }
         &-blue {
             display: inline-block;
-            min-width: 12.3vw;
-            padding: 1.2vw 1vw 1.1vw;
-            font-size: 1.15vw;
+            min-width: 35vw;
+            padding: 2.5vw;
+            font-size: 3vw;
             font-weight: 400;
             border: none;
         }
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 769px) {
     .btn {
         &-gradient {
             min-width: 14vw;

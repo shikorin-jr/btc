@@ -1,13 +1,10 @@
 .numbers {
     & .container {
         background: linear-gradient(180deg, rgba(197, 225, 241, 0.25) 0%, rgba(197, 225, 241, 0.125) 100%);
-        margin-bottom: 6.5vw;
     }
     &__list {
         display: flex;
         justify-content: space-between;
-        padding-top: 9.5vw;
-        padding-bottom: 6.5vw;
     }
     &__item {
         display: flex;
@@ -16,7 +13,6 @@
         & strong {
             position: relative;
             display: inline-block;
-            font-size: 8.7vw;
             padding: 0 1vw;
             margin-bottom: 1.6vw;
             color: $main-color;
@@ -49,7 +45,6 @@
             display: inline-block;
             text-transform: uppercase;
             font-weight: 400;
-            font-size: 1.62vw;
             color: $main-color;
         }
         & .customers {
@@ -71,6 +66,84 @@
                 content: "";
                 background-image: url(../../icons/specialist.svg);
                 width: 2.7vw;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .numbers {
+        margin-bottom: 15vw;
+        &__list{
+            flex-direction: column;
+            padding-top: 20vw;
+            padding-bottom: 15vw;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-bottom: 15vw;
+            }
+            & strong {
+                font-size: 15vw;
+                &::before {
+                    top: -6vw;
+                    margin-bottom: 0.2vw;
+                    z-index: -1;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+            & span {
+                font-size: 3vw;
+            }
+            & .customers {
+                &::before {
+                    width: 6vw;
+                }
+            }
+            & .object {
+                &::before {
+                    width: 6vw;
+                }
+            }
+            & .specialist {
+                &::before {
+                    width: 6vw;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .numbers {
+        margin-bottom: 6.5vw;
+        &__list {
+            padding-top: 9.5vw;
+            padding-bottom: 6.5vw;
+        }
+        &__item {
+            & strong {
+                font-size: 8.7vw;
+            }
+            & span {
+                font-size: 1.62vw;
+            }
+            & .customers {
+                &::before {
+                    width: 3.1vw;
+                }
+            }
+            & .object {
+                &::before {
+                    width: 2.8vw;
+                }
+            }
+            & .specialist {
+                &::before {
+                    width: 2.7vw;
+                }
             }
         }
     }
