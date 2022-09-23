@@ -1,8 +1,4 @@
 .project {
-    margin-bottom: 6.5vw;
-    & .container {
-        padding-bottom: 6.5vw;
-    }
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -65,7 +61,6 @@
     }
     &__image {
         display: block;
-        height: 27.6vw;
         width: 100%;
         overflow: hidden;
         border-radius: 0.5vw;
@@ -80,18 +75,49 @@
         margin-bottom: 2.1vw;
     }
     & .card-title {
-        margin-bottom: 1.3vw;
         margin-top: 0;
         -webkit-line-clamp: 3;
-        height: 6vw;
-    }
-    & .slick-dots {
-        bottom: -2.7vw;
     }
     & .slick-prev {
         left: -3.3vw;
     }
     & .slick-next {
         right: -3.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        margin-bottom: 15vw;
+        &__image {
+            height: 38vw;
+        }
+        & .card-title {
+            margin-bottom: 2vw;
+            height: 10.5vw;
+            line-height: 3.5vw;
+        }
+        & .slick-dots {
+            bottom: -5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .project {
+        margin-bottom: 6.5vw;
+        & .container {
+            padding-bottom: 6.5vw;
+        }
+        &__image {
+            height: 27.6vw;
+        }
+        & .slick-dots {
+            bottom: -2.7vw;
+        }
+        & .card-title {
+            margin-bottom: 1.3vw;
+            height: 6vw;
+        }
     }
 }

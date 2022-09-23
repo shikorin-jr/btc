@@ -89,13 +89,9 @@ ul {
     }
     &__content {
         display: flex;
-        gap: 6vw;
         &-item {
-            width: calc((100% / 2) - 3vw);
             display: flex;
             flex-direction: column;
-            // align-items: flex-start;
-            margin-bottom: 0.6vw;
         }
     }
     &__listen {
@@ -106,7 +102,6 @@ ul {
         &.slick-initialized { 
             visibility: visible;
             opacity: 1;  
-            
         }
     }
 
@@ -124,9 +119,7 @@ ul {
         width: 100%;
     }
 
-    & .slick-dots {
-        bottom: 0vw;
-    }
+    
     & .slick-prev {
         left: -3.3vw;
     }
@@ -163,8 +156,6 @@ ul {
 }
 
 .page-numbers {
-    font-size: 1.5vw;
-    margin: 1.8vw 1.4vw;
     color: #B3B2B2;
 }
 
@@ -184,6 +175,23 @@ ul {
     }
     .card-title {
         font-size: 3vw;
+    }
+    .default {
+        &__content {
+            flex-direction: column-reverse;
+            &-item {
+                width: 100%;
+            }
+        }
+        &__image {
+            height: 60vw;
+        }
+        &__listen {
+            margin-bottom: 10vw;
+        }
+        & .slick-dots {
+            bottom: -5vw;
+        }
     }
     .default__title {
         font-size: 3vw;
@@ -206,6 +214,10 @@ ul {
         line-height: 5vw;
         margin-bottom: 5vw;
     }
+    .page-numbers {
+        font-size: 3vw;
+        margin: 2.5vw;
+    }
 }
 
 @media (min-width: 769px) {
@@ -223,6 +235,21 @@ ul {
     }
     .card-title {
         font-size: 1.71vw;
+    }
+    .default {
+        &__content {
+            gap: 6vw;
+            &-item {
+                width: calc((100% / 2) - 3vw);
+                margin-bottom: 0.6vw;
+            }
+        }
+        &__image {
+            height: 28vw;
+        }
+        & .slick-dots {
+            bottom: 0vw;
+        }
     }
     .default__title {
         font-size: 1.6vw;
@@ -245,6 +272,10 @@ ul {
         font-size: 1.4vw;
         line-height: 2.1vw;
         margin-bottom: 3.3vw;
+    }
+    .page-numbers {
+        font-size: 1.5vw;
+        margin: 1.8vw 1.4vw;
     }
 }
 

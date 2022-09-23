@@ -1,9 +1,5 @@
 .partners  {
     background-color: #FAFAFA;
-    & .container {
-        padding-top: 6.5vw;
-        padding-bottom: 6.5vw;
-    }
     & .title {
         margin-bottom: 7.4vw;
     }
@@ -26,13 +22,40 @@
             object-fit: contain
         }
     }
-    & .slick-dots {
-        bottom: 1.7vw;
-    }
     & .slick-prev {
         left: -3.3vw;
     }
     & .slick-next {
         right: -3.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners {
+        & .container {
+            padding-top: 15vw;
+            padding-bottom: 15vw;
+        }
+        &__item {
+            height: 18vw;
+        }
+        & .slick-dots {
+            bottom: -5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .partners {
+        & .container {
+            padding-top: 6.5vw;
+            padding-bottom: 6.5vw;
+        }
+        &__item {
+            height: 11vw;
+        }
+        & .slick-dots {
+            bottom: 1.7vw;
+        }
     }
 }

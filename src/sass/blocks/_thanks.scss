@@ -1,5 +1,4 @@
 .thanks {
-    margin-bottom: 6.5vw;
     & .title {
         margin-bottom: 7.4vw;
     }
@@ -104,5 +103,17 @@
             -o-transform: translateY(-50%);
             -webkit-transform: translateY(-50%);
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .thanks {
+        margin-bottom: 15vw;
+    }
+}
+
+@media (min-width: 769px) {
+    .thanks {
+        margin-bottom: 6.5vw;
     }
 }

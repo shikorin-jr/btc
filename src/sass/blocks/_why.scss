@@ -1,16 +1,11 @@
 .why {
-    & .container {
-        margin: 6.5vw 0;
-    }
     & .title {
         margin-bottom: 7.4vw;
     }
 }
-
 .tabcontainer {
     margin: 0 auto;
 }   
-
 .tabheader {
     background-color: #fff;
     opacity: 0;
@@ -25,12 +20,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        gap: 7.1vw 7.2vw;
         position: relative;
         z-index: 5;
     }
     &__item {
-        flex: 0 0 calc((100% / 4) - 5.4vw);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -53,26 +46,16 @@
         }
     }
     &__img {
-        height: 4.2vw;
-        width: 4.2vw;
         object-fit: contain;
-        margin-bottom: 0.6vw;
         margin-top: 0.5vw;
         z-index: -1;
     }
     &__name {
         position: relative;
-        font-size: 2.2vw;
         color: $main-color;
         z-index: -1;
     }
 }
-
-
-.tabdescr {
-    width: 35vw;
-}
-
 
 .tabcontent {
     opacity: 0;
@@ -85,14 +68,82 @@
     }
     & h3 {
         margin-top: 0;
-        margin-bottom: 1vw;
         font-weight: 500;
-        font-size: 2.3vw;
         color: $main-color;
         line-height: 1;
     }
-    &__descr {
-        font-size: 1.3vw;
-        line-height: 1.7vw;
+}
+
+@media (max-width: 768px) {
+    .why {
+        & .container {
+            margin: 15vw 0;
+        }
+    }
+    .tabheader {
+        &__items {
+            gap: 7.1vw 7.2vw;
+        }
+        &__item {
+            flex: 0 0 calc((100% / 3) - 5.4vw);
+        }
+        &__img {
+            height: 6vw;
+            width: 8vw;
+            margin-bottom: 2vw;
+        }
+        &__name {
+            font-size: 3vw;
+        }
+    }
+    .tabdescr {
+        width: 100%;
+    }
+    .tabcontent {
+        & h3 {
+            margin-bottom: 5vw;
+            font-size: 4vw;
+        }
+        &__descr {
+            font-size: 3vw;
+            line-height: 5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .why {
+        & .container {
+            margin: 6.5vw 0;
+        }
+    }
+    .tabheader {
+        &__items {
+            gap: 7.1vw 7.2vw;
+        }
+        &__item {
+            flex: 0 0 calc((100% / 4) - 5.4vw);
+        }
+        &__img {
+            height: 4.2vw;
+            width: 4.2vw;
+            margin-bottom: 0.6vw;
+        }
+        &__name {
+            font-size: 2.2vw;
+        }
+    }
+    .tabdescr {
+        width: 35vw;
+    }
+    .tabcontent {
+        & h3 {
+            margin-bottom: 1vw;
+            font-size: 2.3vw;
+        }
+        &__descr {
+            font-size: 1.3vw;
+            line-height: 1.7vw;
+        }
     }
 }

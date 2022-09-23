@@ -1,5 +1,4 @@
 .consultation {
-    padding: 6.5vw;
     background-color: #F5F5F5;
     & .container {
         display: flex;
@@ -8,14 +7,38 @@
     }
     &__title {
         margin-top: 0;
-        margin-bottom: 2.9vw;
-        font-size: 2.12vw;
         font-weight: 500;
     }
     &__description {
         display: inline-block;
-        font-size: 2.4vw;
         font-weight: 700;
-        margin-bottom: 2.9vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .consultation {
+        padding: 15vw 6.5vw;
+        &__title {
+            margin-bottom: 5vw;
+            font-size: 4vw;
+        }
+        &__description {
+            font-size: 3.5vw;
+            margin-bottom: 5vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .consultation {
+        padding: 6.5vw;
+        &__title {
+            margin-bottom: 2.9vw;
+            font-size: 2.12vw;
+        }
+        &__description {
+            font-size: 2.4vw;
+            margin-bottom: 2.9vw;
+        }
     }
 }

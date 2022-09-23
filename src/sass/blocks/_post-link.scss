@@ -1,5 +1,4 @@
 .post-link {
-    padding: 6.5vw 0;
     & .container {
         display: flex;
         gap: 0vw;
@@ -29,5 +28,17 @@
         margin: 0;
         font-size: 1.25vw;
         line-height: 1.8vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .post-link {
+        padding: 15vw 0; 
+    }
+}
+
+@media (min-width: 769px) {
+    .post-link {
+        padding: 6.5vw 0; 
     }
 }
