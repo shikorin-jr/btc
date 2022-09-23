@@ -1,5 +1,4 @@
 .proccess {
-    margin-bottom: 6.5vw;
     & .title {
         margin-bottom: 7.4vw;
     }
@@ -9,19 +8,15 @@
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-        gap: 3.6vw 3vw;
         padding: 0;
     }
     & li {
         position: relative;
-        width: calc((100% / 3) - 2vw);
         padding: 1.8vw 2.3vw 1.6vw 2.3vw;
         overflow: hidden;
         & span {
             width: 70%;
             display: inline-block;
-            font-size: 1.28vw;
-            line-height: 1.96vw;
         }
     }
     & li::before{
@@ -30,10 +25,47 @@
         right: -1.5vw;
         counter-increment: list;
         content: counter(list); 
-        font-size: 15vw;
         line-height: 1;
         font-weight: 700;
         color: #00A0E3;
         opacity: 0.1;
+    }
+}
+
+@media (max-width: 768px) {
+    .proccess {
+        margin-bottom: 15vw;
+        & ol {
+            gap: 3vw 8vw;
+        }
+        & li {
+            width: calc(50% - 4vw);
+            & span {
+                font-size: 2.4vw;
+                line-height: 4vw;
+            }
+        }
+        & li::before{
+            font-size: 22vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .proccess {
+        margin-bottom: 6.5vw;
+        & ol {
+            gap: 3.6vw 3vw;
+        }
+        & li {
+            width: calc((100% / 3) - 2vw);
+            & span {
+                font-size: 1.28vw;
+                line-height: 1.96vw;
+            }
+        }
+        & li::before{
+            font-size: 15vw;
+        }
     }
 }

@@ -1,35 +1,66 @@
 .advantages {
-    margin-bottom: 6.5vw;
-    & .title {
-        margin-bottom: 5vw;
-    }
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-        gap: 3vw 8vw;
-        
     }
     &__item {
         position: relative;
-        padding-left: 5vw;
-        width: calc(50% - 4vw);
-        font-size: 1.35vw;
-        line-height: 2.1vw;
         &::before {
             content: "";
             background-image: url(../../icons/mark-advantages.svg);
-            width: 2.5vw;
             background-repeat: no-repeat;
             background-color: rgba(0,0,0,0);
             background-size: contain;
             height: 100%;
             position: absolute;
-            top: 0.5vw;
             margin-bottom: 0.2vw;
             z-index: -1;
             left: 0;
         }
     }
+}
+
+@media (max-width: 768px) {
+    .advantages {
+        margin-bottom: 15vw;
+        & .title {
+            margin-bottom: 7.4vw;
+        }
+        &__item {
+            padding-left: 8vw;
+            margin-bottom: 3vw;
+            width: 100%;
+            font-size: 3vw;
+            line-height: 5vw;
+            &::before {
+                width: 5vw;
+                top: 1vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .advantages {
+        margin-bottom: 6.5vw;
+        & .title {
+            margin-bottom: 5vw;
+        }
+        &__list {
+            gap: 3vw 8vw;
+        }
+        &__item {
+            padding-left: 5vw;
+            width: calc(50% - 4vw);
+            font-size: 1.35vw;
+            line-height: 2.1vw;
+            &::before {
+                width: 2.5vw;
+                top: 0.5vw;
+            }
+        }
+    }
+    
 }

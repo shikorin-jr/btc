@@ -76,7 +76,6 @@ ul {
 }
 
 .card-title {
-    font-size: 1.71vw;
     color: $main-color;
     overflow: hidden;
     display: -webkit-box;
@@ -136,42 +135,21 @@ ul {
     }
 }
  
-
 .default__title {
     text-transform: uppercase;
     font-weight: 400;
     color: $main-color;
-    font-size: 1.6vw;
     margin-top: 0;
-    margin-bottom: 1.9vw;
 }
 
 .default__item {
     list-style-type: disc;
-    font-size: 1.4vw;
-    margin-left: 1.32vw;
     &::marker {
         color: $main-color;
-        font-size: 1.65vw;
     }
 }
 
-.default__list {
-    margin-bottom: 4vw;
-}
-
-.default__item:not(:last-child){
-    margin-bottom: 1.8vw;
-}
-
-.default__text {
-    font-size: 1.4vw;
-    line-height: 2.1vw;
-    margin-bottom: 3.3vw;
-}
-
 .go-link {
-    font-size: 1.49vw;
     font-weight: 500;
     color: $main-color;
 }
@@ -198,14 +176,35 @@ ul {
         margin-top: 16vw;
     }
     .go-link {
-        font-size: 3vw;
-        line-height: 4vw;
+        font-size: 2.5vw;
+        line-height: 3.5vw;
     }
     .date {
         font-size: 2vw;
     }
     .card-title {
         font-size: 3vw;
+    }
+    .default__title {
+        font-size: 3vw;
+        margin-bottom: 3vw;
+    }
+    .default__item {
+        font-size: 3vw;
+        margin-left: 4vw;
+        line-height: 5vw;
+        &::marker {
+            font-size: 3vw;
+        }
+    }
+    .default__list {
+        margin-bottom: 8vw;
+    }
+    .default__text {
+        margin-top: 0;
+        font-size: 3vw;
+        line-height: 5vw;
+        margin-bottom: 5vw;
     }
 }
 
@@ -224,6 +223,28 @@ ul {
     }
     .card-title {
         font-size: 1.71vw;
+    }
+    .default__title {
+        font-size: 1.6vw;
+        margin-bottom: 1.9vw;
+    }
+    .default__item {
+        font-size: 1.4vw;
+        margin-left: 1.32vw;
+        &::marker {
+            font-size: 1.65vw;
+        }
+    }
+    .default__list {
+        margin-bottom: 4vw;
+    }
+    .default__item:not(:last-child){
+        margin-bottom: 1.8vw;
+    }
+    .default__text {
+        font-size: 1.4vw;
+        line-height: 2.1vw;
+        margin-bottom: 3.3vw;
     }
 }
 

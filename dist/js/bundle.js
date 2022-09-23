@@ -14191,7 +14191,8 @@ window.addEventListener('DOMContentLoaded', function () {
                     slidesToShow: 2,
                     slidesToScroll: 1,
                     infinite: true,
-                    dots: true
+                    dots: true,
+                    arrows: false
                 }
             }
 

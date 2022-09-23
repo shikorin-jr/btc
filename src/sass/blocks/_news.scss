@@ -1,12 +1,11 @@
 .news {
-    margin-bottom: 6.5vw;
     &__wrapper {
         display: flex;
         justify-content: space-between;
         align-items: end;
         margin-bottom: 7.1vw;
         & .title {
-            width: 70%;
+            width: 65%;
         }
     }
     &__list {
@@ -48,11 +47,9 @@
     }
     &__imglink {
         display: block;
-        height: 22.2vw;
         width: 100%;
         overflow: hidden;
         border-radius: 0.5vw;
-        margin-bottom: 2vw;
     }
     &__img {
         object-fit: cover;
@@ -75,8 +72,6 @@
     }
     &__readmore {
         display: inline-block;
-        margin-bottom: 0.8vw;
-        font-size: 1.1vw;
         color: #686868;
         &::after {
             content: '→';
@@ -84,7 +79,6 @@
             margin-left: 0.5vw;
         }
     }
-    
     & .slick-prev {
         left: -3.3vw;
     }
