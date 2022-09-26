@@ -1,42 +1,20 @@
 .contacts {
-    padding: 6.5vw 0;
     background-color: #FAFAFA;
     & .container {
         display: flex;
     }
-
     & .title {
         margin-bottom: 4.9vw;
     }
-
-    &__left {
-        width: 44%;
-        padding-top: 3vw;
-        
-    }
-
-    &__right {
-        width: 56%;
-        padding-top: 3vw;
-        padding-bottom: 3vw;
-        padding-left: 5vw;
-        border-left: 0.15vw solid $main-color;
-    }
-    
     &__feedback {
         margin-bottom: 5.3vw; 
-        & a:not(:last-child) {
-            margin-bottom: 2vw;
-        }
     }
     &__phone, &__mail, &__map {
         position: relative;
         display: flex;
         align-items: center;
         line-height: 1;
-        padding-left: 3.3vw;
         font-weight: 400;
-        font-size: 1.8vw;
         letter-spacing: -0.02vw;
         color: #000;
         &::before {
@@ -48,7 +26,6 @@
             margin-bottom: 0.2vw;
         }
     }
-
     &__phone {
         &::before {
             content: '';
@@ -66,11 +43,7 @@
 
         }
     }
-    &__location {
-        & span:not(:last-child) {
-            margin-bottom: 2vw;
-        }
-    }
+    
     &__map {
         &::before {
             content: '';
@@ -83,28 +56,19 @@
     &__form {
         display: flex;
         flex-direction: column;
-        margin-right: 3vw;
         & .btn {
             margin: 0 auto;
         }
         & label {
-            font-size: 1.2vw;
-            line-height: 1.5vw;
-            margin-bottom: 2vw;
             & a {
                 color: $main-color;
             }
-            
         }
     }
     &__input {
         width: 100%;
-        height: 3.6vw;
         background: #fff;
         border: none;
-        font-size: 1.2vw;
-        padding: 0 1.6vw;
-        margin-bottom: 1.5vw;
         outline: 0;
         border: 0.01vw solid $main-color;
         border-radius: 0.5vw;
@@ -113,12 +77,8 @@
         display: flex;
         align-items: center;
         width: 100%;
-        height: 8vw;
         background: #fff;
         border: none;
-        font-size: 1.2vw;
-        padding: 1.2vw 1.6vw;
-        margin-bottom: 2vw;
         outline: 0;
         border: 0.01vw solid $main-color;
         border-radius: 0.5vw;
@@ -133,15 +93,11 @@
             &::before {
                 content: '';
                 display: flex;
-                width: 1.15vw;
-                height: 1.15vw;
                 flex-shrink: 0;
                 flex-grow: 0;
                 border: 0.12vw solid $main-color;
                 border-radius: 0.4vw;
-                margin-right: 1.8vw;
                 cursor: pointer;
-                padding: 0.6vw;
                 box-sizing: border-box;
             }
         }
@@ -153,7 +109,141 @@
             font-size: 1vw;
             align-items: center;
             justify-content: center;
-          }
+        }
     }
+}
 
+@media (max-width: 768px) {
+    .contacts {
+        padding: 15vw 0;
+        & .title {
+            text-align: center;
+        }
+        & .container {
+            flex-direction: column;
+        }
+        &__left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__right {
+            padding-top: 15vw;
+            padding-bottom: 3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        &__form {
+            & label {
+                font-size: 3vw;
+                line-height: 4vw;
+                margin-bottom: 3vw;
+            }
+        }
+        &__feedback {
+            & a:not(:last-child) {
+                margin-bottom: 3vw;
+            }
+        }
+        &__location {
+            display: contents;
+            & span:not(:last-child) {
+                margin-bottom: 3vw;
+            }
+        }
+        &__phone, &__mail, &__map {
+            font-size: 3vw;
+            padding-left: 5vw;
+        }
+        &__input {
+            height: 8vw;
+            font-size: 3vw;
+            padding: 0 3vw;
+            margin-bottom: 3vw;
+        } 
+        &__textarea {
+            height: 14vw;
+            font-size: 3vw;
+            padding: 2vw 3vw;
+            margin-bottom: 3vw;
+        }
+        &__checkbox {
+            &+label {
+                &::before {
+                    width: 5vw;
+                    height: 5vw;
+                    margin-right: 3vw;
+                    padding: 1vw;
+                }
+            }
+            &:checked+label::before {
+                font-size: 2.5vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .contacts {
+        padding: 6.5vw 0;
+        &__left {
+            width: 44%;
+            padding-top: 3vw;
+        }
+        &__right {
+            width: 56%;
+            padding-top: 3vw;
+            padding-bottom: 3vw;
+            padding-left: 5vw;
+            border-left: 0.15vw solid $main-color;
+        }
+        &__feedback {
+            & a:not(:last-child) {
+                margin-bottom: 2vw;
+            }
+        }
+        &__location {
+            & span:not(:last-child) {
+                margin-bottom: 2vw;
+            }
+        }
+        &__phone, &__mail, &__map {
+            font-size: 1.8vw;
+            padding-left: 3.3vw;
+        }
+        &__form {
+            margin-right: 3vw;
+            & label {
+                font-size: 1.2vw;
+                line-height: 1.5vw;
+                margin-bottom: 2vw;
+            }
+        }
+        &__input {
+            height: 3.6vw;
+            font-size: 1.2vw;
+            padding: 0 1.6vw;
+            margin-bottom: 1.5vw;
+        } 
+        &__textarea {
+            height: 8vw;
+            font-size: 1.2vw;
+            padding: 1.2vw 1.6vw;
+            margin-bottom: 2vw;
+        }
+        &__checkbox {
+            &+label {
+                &::before {
+                    width: 1.15vw;
+                    height: 1.15vw;
+                    margin-right: 1.8vw;
+                    padding: 0.6vw;
+                }
+            }
+            &:checked+label::before {
+                font-size: 1vw;
+            }
+        }
+    }
 }

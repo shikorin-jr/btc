@@ -9,13 +9,11 @@
     overflow: hidden;
     background-color: rgba(0, 0, 0, .5);
     &__dialog {
-        max-width: 60vw;
         margin: 1vw auto
     }
     &__content {
         position: relative;
         width: 100%;
-        padding: 3.5vw 7vw;
         background-color: #fff;
         border: 0.01vw solid rgba(0, 0, 0, .2);
         border-radius: 0.5vw;
@@ -40,14 +38,58 @@
     }
     &__title {
         margin-top: 0;
-        margin-bottom: 1.2vw;
-        font-size: 2.2vw;
         font-weight: 500;
         color: $main-color;
     }
     &__description {
         margin-top: 0;
-        margin-bottom: 1.4vw;
-        font-size: 1.3vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal {
+        &__dialog {
+            max-width: 90vw;
+        }
+        &__content {
+            padding: 2.5vw 7vw;
+        }
+        &__close {
+            top: 1vw;
+            right: 2vw;
+            font-size: 8vw;
+        }
+        &__title {
+            margin-bottom: 2vw;
+            font-size: 4vw;
+        }
+        &__description {
+            margin-bottom: 2vw;
+            font-size: 3vw;
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    .modal {
+        &__dialog {
+            max-width: 60vw;
+        }
+        &__content {
+            padding: 2.5vw 7vw;
+        }
+        &__close {
+            top: 1vw;
+            right: 1vw;
+            font-size: 2vw;
+        }
+        &__title {
+            margin-bottom: 1.2vw;
+            font-size: 2.2vw;
+        }
+        &__description {
+            margin-bottom: 1.4vw;
+            font-size: 1.3vw;
+        }
     }
 }

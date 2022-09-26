@@ -34,24 +34,21 @@
     }
     .toggle .line1 {
         transform: rotate(-45deg) translate(-.8vw,.8vw);
-        background-color: #fff;
+        background-color: $main-color;
         transition: all 1s ease;
     }
     .toggle .line2 {
         transform: scaleY(0);;
-        background-color: #fff;
+        background-color: $main-color;
         transition: all 1s ease;
     }
     .toggle .line3 {
         transform: rotate(45deg) translate(-.8vw,-.8vw);
-        background-color: #fff;
+        background-color: $main-color;
         transition: all 1s ease;
     }
     .nav-active {
         transform: translateX(0%);
-    }
-    .nav-active {
-        transform: translateX(0%)
     }
     .hidden {
         overflow: hidden;

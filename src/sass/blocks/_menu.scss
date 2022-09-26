@@ -1,11 +1,47 @@
 .menu {
-    &__list {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-    }
     &__link {
         color: #006382;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .menu {
+        padding: 0 4.3vw;
+    }
+    .footer .menu {
+        &__list {
+            width: 100%;
+            margin-top: 2vw;
+            margin-bottom: 2vw;
+            display: flex;
+        }
+        &__item {
+            font-weight: 500;
+            font-size: 3vw;
+            &:not(:last-child) {
+                margin-right: 3.75vw;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .header .menu {
+        padding: 0 8.9vw;
+    }
+    .footer .menu {
+        &__list {
+            display: flex;
+        }
+        &__item {
+            &:not(:last-child) {
+                margin-right: 3.75vw;
+            }
+        }
+        &__link {
+            display: block;
+            font-size: 2.3vw;
+        }
     }
 }
 
@@ -14,41 +50,22 @@
         &__list {
             flex-direction: column;
             width: 100%;
-            margin-top: 19vw;
-            margin-bottom: 10vw;
-            overflow-y: scroll;
+            border-bottom: 0.12vw solid #006382;
+            padding-bottom: 5vw;
         }
         &__item {
-            font-size: 8.3vw;
-            line-height: 13.5vw;
-            text-transform: uppercase;
+            font-size: 5vw;
+            line-height: 10vw;
             list-style-type: none;
             color: #fff;
-            text-align: center;
             cursor: pointer;
             &:hover {
                 color: $main-color;
             }
             & a {
-                color: #fff;
                 &:hover {
-                    color: $main-color;
+                    opacity: 0.8;
                 }
-            }
-        }
-    }
-
-    .footer .menu {
-        &__list {
-            width: 100%;
-            margin-top: 2vw;
-            margin-bottom: 2vw;
-        }
-        &__item {
-            font-weight: 500;
-            &:not(:last-child) {
-                margin-right: 3.75vw;
-                
             }
         }
     }
@@ -56,11 +73,15 @@
 
 @media (min-width: 1025px) {
     .menu {
+        &__list {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
         &__item {
             font-weight: 500;
             &:not(:last-child) {
                 margin-right: 3.75vw;
-                
             }
         }
         &__link {

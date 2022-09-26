@@ -2,10 +2,8 @@ import $ from 'jquery';
 import 'slick-carousel';
 import tabs from './modules/tabs';
 import modal from './modules/modal';
-import { openModal } from './modules/modal';
 
 window.addEventListener('DOMContentLoaded', function () {
-
     $('.promo__slider').slick({
         dots: true,
         infinite: true,
@@ -31,7 +29,6 @@ window.addEventListener('DOMContentLoaded', function () {
                     arrows: false
                 }
             }
-
         ]
     });
 
@@ -61,7 +58,8 @@ window.addEventListener('DOMContentLoaded', function () {
         infinite: true,
         speed: 300,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        arrows: false
     });
 
     $('.partners__list').slick({
@@ -84,11 +82,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
         ]
     });
-    const modalTimerId = setTimeout(() => openModal('.modal', modalTimerId), 50000);
 
     tabs('.tabheader__item', '.tabcontent', '.tabheader__items', 'tabheader__item_active');
-    modal('[data-modal]', '.modal', modalTimerId);
-
+    modal('[data-modal]', '.modal');
 
     const navSlide = () => {
         const hamburger = document.querySelector('.hamburger');
@@ -107,6 +103,24 @@ window.addEventListener('DOMContentLoaded', function () {
 
     app();
 
+    function showHeaderByScroll() {
+        const   contacts = document.querySelector('.header__feedback'),
+                headerHe = document.querySelector('.header .container');
+        const scrolled = window.pageYOffset || document.documentElement.scrollTop;
 
+        if ((scrolled >= 150) && (document.documentElement.clientWidth > 1024)) {
+            contacts.classList.add('hide');
+            
+            contacts.classList.remove('show-flex');
+            headerHe.classList.add('fade');
+            headerHe.style.height = '6vw';
+        } else {
+            contacts.classList.add('show-flex');
+            contacts.classList.remove('hide');
+            headerHe.classList.remove('fade');
+            headerHe.style.height = '';
+        }
+    }
+    window.addEventListener('scroll', showHeaderByScroll);
 
 });

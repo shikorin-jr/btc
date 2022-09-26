@@ -17,28 +17,45 @@
     }
     &__linked {
         margin-bottom: 2.6vw;
-        font-size: 1.71vw;
         color: #0081bf;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         display: -webkit-box; 
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
     &__descr {
         margin: 0;
-        font-size: 1.25vw;
-        line-height: 1.8vw;
+        -webkit-line-clamp: 4;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
 @media (max-width: 768px) {
     .post-link {
-        padding: 15vw 0; 
+        padding: 15vw 0;
+        &__linked {
+            font-size: 3vw;
+            line-height: 3.5vw;
+        } 
+        &__descr {
+            font-weight: 300;
+            font-size: 3vw;
+            line-height: 3.5vw;
+        }
     }
 }
 
 @media (min-width: 769px) {
     .post-link {
         padding: 6.5vw 0; 
+        &__linked {
+            font-size: 1.71vw;
+        }
+        &__descr {
+            font-size: 1.25vw;
+            line-height: 1.8vw;
+        }
     }
 }

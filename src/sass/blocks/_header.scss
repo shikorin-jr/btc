@@ -13,22 +13,15 @@
     &__left {
         display: flex;
         align-items: center;
+        z-index: 10500;
+        background-color: #fff;
     }
     &__description {
         font-weight: 700;
         color: #006382;
     }
-    &__right {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 0.4vw;
-    }
     &__feedback {
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        margin-bottom: 1.6vw;
     }
     &__contact {
         margin-right: 1.5vw;
@@ -51,6 +44,24 @@
             margin-bottom: 0.2vw;
         }
     }
+    &__mail {
+        position: relative;
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        &::before {
+            content: '';
+            background-image: url(../../icons/letter.svg);
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-size: contain;
+            width: 80%;
+            height: 80%;
+            position: absolute;
+            left: 0;
+            margin-bottom: 0.2vw;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -64,9 +75,13 @@
             margin-top: 2vw;
             line-height: 3.3vw;
         }
+        &__right{
+            padding-top: 18vw;
+        }
+        &__feedback {
+            padding: 0 4.3vw;
+        }
     }
-
-    
 }
 
 @media (min-width: 769px) {
@@ -79,21 +94,23 @@
 
 @media (min-width: 769px) and (max-width: 1024px) {
     .header {
-        
-
         &__description {
             font-size: 1.51vw;
             width: 40vw;
             margin-top: 2vw;
             line-height: 2.3vw;
         }
-
+        &__right{
+            padding-top: 12vw;
+        }
+        &__feedback {
+            padding: 0 8.9vw;
+        }
     }
 }
 
 @media (max-width: 1025px) {
     .header {
-        
         &__left {
             & .logo {
                 margin-right: 2.2vw;
@@ -104,22 +121,55 @@
             top: 0;
             right: 0;
             height: 100vh;
-            background-color: #000;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
-            align-items: center;
             width: 100%;
             transform: translateX(100%);
             transition: transform 0.5s ease-in;
+            overflow-y: scroll;
+        }
+        &__feedback .btn {
+            display: none;
+        }
+        & .menu {
+            order: 1;
+        }
+        &__feedback {
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 5vw;
+            margin-bottom: 5vw;
+            order: 2;
+        }
+        &__phone {
+            padding-left: 8vw;
+            font-weight: 500;
+            font-size: 5vw;
+            letter-spacing: -0.02vw;
+            color: #000;
+            margin-bottom: 5vw;
+        }
+        &__mail {
+            padding-left: 8vw;
+            font-weight: 500;
+            font-size: 5vw;
+            letter-spacing: -0.02vw;
+            color: #000;
         }
     }
 }
 
 @media (min-width: 1025px) {
     .header {
-
         &__item {
             flex: 1 1 50%;
+        }
+        &__right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 0.4vw;
         }
         &__left {
             & .logo {
@@ -133,12 +183,20 @@
             letter-spacing: 0.025vw;
             line-height: 1.6vw;
         }
+        &__feedback {
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 1.6vw;
+        }
         &__phone {
             padding-left: 2vw;
             font-weight: 500;
             font-size: 1.4vw;
             letter-spacing: -0.02vw;
             color: #000;
+        }
+        &__mail {
+            display: none;
         }
     }
 }
