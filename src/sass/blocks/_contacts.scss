@@ -48,8 +48,7 @@
         &::before {
             content: '';
             background-image: url(../../icons/location.svg);
-            width: 120%;
-            height: 120%;
+            width: 100%;
 
         }
     }
@@ -181,6 +180,11 @@
                 font-size: 2.5vw;
             }
         }
+        &__map {
+            &::before {
+                height: 4vw;
+            }
+        }
     }
 }
 
@@ -243,6 +247,11 @@
             }
             &:checked+label::before {
                 font-size: 1vw;
+            }
+        }
+        &__map {
+            &::before {
+                height: 2.5vw;
             }
         }
     }
