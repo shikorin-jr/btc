@@ -19,21 +19,25 @@ function modal(triggerSelector, modalSelector) {
     const modalTrigger = document.querySelectorAll(triggerSelector),
         modal = document.querySelector(modalSelector);
 
-    modalTrigger.forEach(btn => {
-        btn.addEventListener('click', () => openModal(modalSelector));
-    });
+    if (modal) {
+        modalTrigger.forEach(btn => {
+            btn.addEventListener('click', () => openModal(modalSelector));
+        });
+    
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal || e.target.getAttribute('data-close') == "") {
+                closeModal(modalSelector);
+            }
+        });
+    
+        document.addEventListener('keydown', (e) => {
+            if (e.code === "Escape" && modal.classList.contains('show')) { 
+                closeModal(modalSelector);
+            }
+        });
+    }
 
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal || e.target.getAttribute('data-close') == "") {
-            closeModal(modalSelector);
-        }
-    });
-
-    document.addEventListener('keydown', (e) => {
-        if (e.code === "Escape" && modal.classList.contains('show')) { 
-            closeModal(modalSelector);
-        }
-    });
+    
 }
 
 export default modal;
